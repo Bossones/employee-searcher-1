@@ -31,6 +31,7 @@
     - Пользователь может искать сотрудников по департаменту или возрасту или идентификатору. Программа должна поддерживать ввод параметров через командную строку, например:
 
 
+
       java EmployeeSearcher --department "IT"
 
 Или
@@ -45,10 +46,20 @@
 
       java EmployeeSearcher --department Marketing --age 25
 
+Или без агрументов:
+
+      java EmployeeSearcher
+
+Нет необходимости выполнять выполнять фильтры вида:
+      
+      java EmployeeSearcher --department Marketing --department IT
+      java EmployeeSearcher --age 30 --age 20
+
 
 5. Вывод преобразованных данных в файл:
-    - Преобразованные и отфильтрованные по запросу данные должны быть записаны в новый CSV-файл (filtered_employees.csv).
-    - Данные, не прошедшие валидацию при запросе, должны быть записаны в новый CSV-файл (filtered_not_valid_employees.csv)
+    - Все преобразованные и отфильтрованные по запросу данные должны быть записаны в новый CSV-файл (__filtered_employees.csv__).
+    - Все преобразованные и отфильтрованные по запросу данные должны быть сгруппированы по полю __department__ и записаны в свои файлы (__filtered_employees_IT.csv__, __filtered_employees_Marketing.csv__ и т.д.)
+    - Данные, не прошедшие валидацию при запросе, должны быть записаны в новый CSV-файл (__filtered_not_valid_employees.csv__)
 
 ---
 
